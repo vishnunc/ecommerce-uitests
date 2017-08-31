@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('sample') {
       steps {
-        cucumber(fileIncludePattern: 'cucumber.json', jsonReportDirectory: 'target/')
+        cucumber(fileIncludePattern: 'cucumber.json', jsonReportDirectory: 'target/', buildStatus: 'SUCCESS')
         hygieiaArtifactPublishStep(artifactName: 'x', artifactDirectory: 'y', artifactGroup: 'z', artifactVersion: 'q')
         hygieiaBuildPublishStep(buildStatus: 'SUCCESS')
         hygieiaSonarPublishStep()
