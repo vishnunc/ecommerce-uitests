@@ -1,40 +1,481 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 4,
-        "name": "Just a failing scenario",
+        "line": 11,
+        "name": "Add To Basket when not logged in",
         "description": "",
-        "id": "gradle-cucumber-integration;just-a-failing-scenario",
+        "id": "as-a-user-i-should-be-select-a-product-and-add-it-to-the-basket;add-to-basket-when-not-logged-in;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "I am on the product home page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I select a something",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I should see the something detail page",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "I add product to Basket",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "I should see the login page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Add To Basket when logged in",
+        "description": "",
+        "id": "as-a-user-i-should-be-select-a-product-and-add-it-to-the-basket;add-to-basket-when-logged-in;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "I am logged in",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "I am on the product home page",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "I select a something",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "I should see the something detail page",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 19,
+            "name": "I add product to Basket",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 20,
+            "name": "something should be added to my basket",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "As a user I should be select a product and Add it to the Basket",
+    "description": "",
+    "id": "as-a-user-i-should-be-select-a-product-and-add-it-to-the-basket",
+    "keyword": "Feature",
+    "uri": "gradle/cucumber/AddToBasket.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "you",
+        "description": "",
+        "id": "as-a-user-i-should-be-able-to-view-items-added-in-my-basket;you",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 141289108,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 5,
-            "name": "I run a failing step",
-            "match": {
-              "location": "BasicStepdefs.I_run_a_failing_step()"
-            },
-            "keyword": "When "
+            "line": 4,
+            "name": "I",
+            "match": {},
+            "keyword": "Given "
           }
         ]
       }
     ],
-    "name": "Gradle-Cucumber integration",
+    "name": "As a user I should be able to view items added in my basket",
     "description": "",
-    "id": "gradle-cucumber-integration",
+    "id": "as-a-user-i-should-be-able-to-view-items-added-in-my-basket",
     "keyword": "Feature",
-    "uri": "gradle/cucumber/featureSets/New Test Set/gradle.feature",
-    "tags": [
+    "uri": "gradle/cucumber/Basket.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
       {
-        "line": 1,
-        "name": "@TestTag"
+        "line": 15,
+        "name": "Authorized user should be able to continue shopping",
+        "description": "",
+        "id": "as-a-user-once-i-add-items-to-cart-i-should-be-able-to-continue-shopping;authorized-user-should-be-able-to-continue-shopping;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "I am logged in",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I am on the product home page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I select a some",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "I should see the some detail page",
+            "match": {},
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "I add product to Basket",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "I should see the continue shopping button",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "I continue shopping",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "I should be able to view list of items",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
       }
-    ]
+    ],
+    "name": "As a user once I add items to cart I should be able to continue shopping",
+    "description": "",
+    "id": "as-a-user-once-i-add-items-to-cart-i-should-be-able-to-continue-shopping",
+    "keyword": "Feature",
+    "uri": "gradle/cucumber/ContinueShopping.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Unauthorized user should be able to view list of items",
+        "description": "",
+        "id": "as-a-user-i-should-be-to-view-the-list-of-items-in-home-page;unauthorized-user-should-be-able-to-view-list-of-items",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "I am on the home page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I should be able to view list of items",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Authorized user should be able to view list of items",
+        "description": "",
+        "id": "as-a-user-i-should-be-to-view-the-list-of-items-in-home-page;authorized-user-should-be-able-to-view-list-of-items;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "I am logged in",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "I am on the home page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "I should be able to view list of items",
+            "match": {},
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "As a user I should be to view the list of items in home page",
+    "description": "",
+    "id": "as-a-user-i-should-be-to-view-the-list-of-items-in-home-page",
+    "keyword": "Feature",
+    "uri": "gradle/cucumber/Home.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 9,
+        "name": "User should be able to login successfully",
+        "description": "",
+        "id": "as-a-user-i-should-be-able-to-login-to-application;user-should-be-able-to-login-successfully;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I enter my johnd and password and sign in",
+            "match": {},
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I should be logged in successfully",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "User should be able to login successfully",
+        "description": "",
+        "id": "as-a-user-i-should-be-able-to-login-to-application;user-should-be-able-to-login-successfully;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "I enter my acme and something and sign in",
+            "match": {},
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "I should be logged in successfully",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "Unauthorized access to application is not allowed",
+        "description": "",
+        "id": "as-a-user-i-should-be-able-to-login-to-application;unauthorized-access-to-application-is-not-allowed;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "I am on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "I enter my some and some and sign in",
+            "match": {},
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "I should remain on the login page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "As a user I should be able to login to application",
+    "description": "",
+    "id": "as-a-user-i-should-be-able-to-login-to-application",
+    "keyword": "Feature",
+    "uri": "gradle/cucumber/Login.feature"
   }
 ]

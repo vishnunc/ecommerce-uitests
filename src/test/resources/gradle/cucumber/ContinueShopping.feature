@@ -1,6 +1,15 @@
-Feature: As a user I should be able to login to application
+Feature: As a user once I add items to cart I should be able to continue shopping
 	
-	Scenario: User should be able to login successfully
-		Given I am on the login page
-		When I enter my <username> and <password>
-		Then I
+	Scenario Outline: Authorized user should be able to continue shopping
+		Given I am logged in
+		Given I am on the product home page
+		When I select a <product>
+		Then I should see the <product> detail page
+		When I add product to Basket
+		Then I should see the continue shopping button
+		When I continue shopping
+		Then I should be able to view list of items
+	
+	Examples:
+	|product|
+	|some|
