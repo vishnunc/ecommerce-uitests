@@ -15,6 +15,11 @@ task cucumber() {
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', features, '--plugin', 'json:target/cucumber.json']
         }
+		javaexec {
+			main = "gradle.cucumber.Reporter"
+			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+			
+		}
     }
 }
 

@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -35,7 +36,8 @@ public class Hooks {
 			}
 			else if(UIDriver.configprop.getProperty("Browser").equalsIgnoreCase("chrome"))
 			{
-				UIDriver.driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),DesiredCapabilities.chrome());
+				
+				UIDriver.driver = new ChromeDriver();
 			}
 		
 		} 
@@ -67,10 +69,10 @@ public class Hooks {
 		
 		File reportOutputDirectory = new File("target");
 		List<String> jsonFiles = new ArrayList<>();
-		jsonFiles.add("cucumber.json");
+		jsonFiles.add("target/cucumber.json");
 		
 		String buildNumber = "1";
-		String projectName = "cucumberProject";
+		String projectName = "ecommerce";
 		boolean runWithJenkins = false;
 		boolean parallelTesting = false;
 
@@ -80,8 +82,8 @@ public class Hooks {
 		configuration.setRunWithJenkins(runWithJenkins);
 		configuration.setBuildNumber(buildNumber);
 		// addidtional metadata presented on main page
-		configuration.addClassifications("Platform", "Windows");
-		configuration.addClassifications("Browser", "Firefox");
+		configuration.addClassifications("Platform", "Mac");
+		configuration.addClassifications("Browser", "Chrome");
 		configuration.addClassifications("Branch", "release/1.0");
 
 		ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
