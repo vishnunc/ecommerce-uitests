@@ -13,7 +13,7 @@ task cucumber() {
         javaexec {
             main = "cucumber.api.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources', '--plugin', 'json:target/cucumber.json']
+            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', features, '--plugin', 'json:target/cucumber.json']
         }
     }
 }
@@ -23,6 +23,9 @@ dependencies {
     testCompile 'info.cukes:cucumber-junit:1.2.5'
 
     testCompile 'junit:junit:4.12'
+	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53.0'
+	
 }
 
 repositories {
