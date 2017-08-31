@@ -10,7 +10,8 @@ import net.masterthought.cucumber.Reportable;
 
 public class Reporter{
 
-	public static void main(String[] args){
+	public static void main(String[] args) throws InterruptedException{
+		Thread.sleep(3000);
 		File reportOutputDirectory = new File("target");
 		List<String> jsonFiles = new ArrayList<>();
 		jsonFiles.add("target/cucumber.json");
@@ -34,5 +35,6 @@ public class Reporter{
 		Reportable result = reportBuilder.generateReports();
 		// and here validate 'result' to decide what to do
 		// if report has failed features, undefined steps etc
+		System.out.println("Completed!");
 	}
 }

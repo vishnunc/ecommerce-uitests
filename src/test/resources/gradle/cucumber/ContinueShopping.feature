@@ -3,8 +3,8 @@ Feature: As a user once I add items to cart I should be able to continue shoppin
 	Scenario Outline: Authorized user should be able to continue shopping
 		Given I am logged in
 		Given I am on the product home page
-		When I select a <product>
-		Then I should see the <product> detail page
+		When I select a "<product>"
+		Then I should see the "<product>" detail page
 		When I add product to Basket
 		Then I should see the continue shopping button
 		When I continue shopping
@@ -12,4 +12,4 @@ Feature: As a user once I add items to cart I should be able to continue shoppin
 	
 	Examples:
 	|product|
-	|some|
+	|The Bone Bed|
