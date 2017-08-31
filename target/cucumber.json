@@ -1,0 +1,40 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Just a failing scenario",
+        "description": "",
+        "id": "gradle-cucumber-integration;just-a-failing-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 141289108,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I run a failing step",
+            "match": {
+              "location": "BasicStepdefs.I_run_a_failing_step()"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Gradle-Cucumber integration",
+    "description": "",
+    "id": "gradle-cucumber-integration",
+    "keyword": "Feature",
+    "uri": "gradle/cucumber/featureSets/New Test Set/gradle.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@TestTag"
+      }
+    ]
+  }
+]
