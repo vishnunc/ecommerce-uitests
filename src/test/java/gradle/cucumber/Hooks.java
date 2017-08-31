@@ -1,8 +1,11 @@
 package gradle.cucumber;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -11,6 +14,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import net.masterthought.cucumber.Configuration;
+import net.masterthought.cucumber.ReportBuilder;
+import net.masterthought.cucumber.Reportable;
 import cucumber.api.Scenario;
 public class Hooks {
 	
@@ -58,6 +64,30 @@ public class Hooks {
 			scenario.embed(UIDriver.captureScreenshot(), "image/png"); 
 		}
 		UIDriver.driver.quit();
+		
+		File reportOutputDirectory = new File("target");
+		List<String> jsonFiles = new ArrayList<>();
+		jsonFiles.add("cucumber.json");
+		
+		String buildNumber = "1";
+		String projectName = "cucumberProject";
+		boolean runWithJenkins = false;
+		boolean parallelTesting = false;
+
+		Configuration configuration = new Configuration(reportOutputDirectory, projectName);
+		// optional configuration
+		configuration.setParallelTesting(parallelTesting);
+		configuration.setRunWithJenkins(runWithJenkins);
+		configuration.setBuildNumber(buildNumber);
+		// addidtional metadata presented on main page
+		configuration.addClassifications("Platform", "Windows");
+		configuration.addClassifications("Browser", "Firefox");
+		configuration.addClassifications("Branch", "release/1.0");
+
+		ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
+		Reportable result = reportBuilder.generateReports();
+		// and here validate 'result' to decide what to do
+		// if report has failed features, undefined steps etc
 	}
 	
 }
