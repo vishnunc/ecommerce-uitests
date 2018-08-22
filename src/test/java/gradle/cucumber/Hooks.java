@@ -29,7 +29,7 @@ public class Hooks {
 		try 
 		{
 			UIDriver.configprop.load(new FileInputStream("config/config.properties"));
-			System.setProperty("webdriver.chrome.driver","drivers/chrome.exe");
+			System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
 			if(UIDriver.configprop.getProperty("Browser").equalsIgnoreCase("firefox"))
 			{
 				UIDriver.driver = new FirefoxDriver();		
