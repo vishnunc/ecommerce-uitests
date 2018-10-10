@@ -28,6 +28,7 @@ public class Hooks {
 		UIDriver.mystep = s;
 		try 
 		{
+			System.setProperty("webdriver.chrome.driver", "config/chromedriver");
 			UIDriver.configprop.load(new FileInputStream("config/config.properties"));
 			
 			if(UIDriver.configprop.getProperty("Browser").equalsIgnoreCase("firefox"))

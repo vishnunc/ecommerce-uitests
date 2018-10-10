@@ -16,6 +16,8 @@ public class BasicStepdefs {
 	    // Write code here that turns the phrase above into concrete actions
 	    UIDriver.driver.navigate().to("http://localhost:9002");
 	    UIDriver.driver.manage().window().maximize();
+	   // UIDriver.mystep.write("hello");
+	    //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@When("^I add product to Basket$")
@@ -23,6 +25,8 @@ public class BasicStepdefs {
 	    // Write code here that turns the phrase above into concrete actions
 	    UIDriver.click(By.xpath("//input[@type='submit']"));
 	    Thread.sleep(2000);
+	    //UIDriver.mystep.write("hello");
+	    //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@Then("^I should see the login page$")
@@ -36,6 +40,8 @@ public class BasicStepdefs {
 	    {
 	    	assertFalse("I do not see login page", true);
 	    }
+		//UIDriver.mystep.write("hello");
+		//UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@Given("^I am logged in$")
@@ -46,6 +52,8 @@ public class BasicStepdefs {
 	    UIDriver.enter_text(By.name("username"), "johnd");
 	    UIDriver.enter_text(By.name("password"), "password");
 	    UIDriver.click(By.xpath("//button[@type='submit']"));
+	    //UIDriver.mystep.write("hello");
+	    //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	
@@ -53,6 +61,8 @@ public class BasicStepdefs {
 	public void i_select_a(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    UIDriver.click(By.linkText(arg1));
+	    //UIDriver.mystep.write("hello");
+	    //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@Then("^I should see the \"([^\"]*)\" detail page$")
@@ -66,6 +76,8 @@ public class BasicStepdefs {
 	    {
 	    	assertFalse("I do not see product detail page",false);
 	    }
+	    //UIDriver.mystep.write("hello");
+	    //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@Then("^\"([^\"]*)\" should be added to my basket$")
@@ -79,6 +91,8 @@ public class BasicStepdefs {
 	    {
 	    	assertFalse("I do not see product detail page",false);
 	    }
+		//UIDriver.mystep.write("hello");
+		//UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@When("^I enter my \"([^\"]*)\" and \"([^\"]*)\" and sign in$")
@@ -87,6 +101,7 @@ public class BasicStepdefs {
 	    UIDriver.enter_text(By.name("username"), arg1);
 	    UIDriver.enter_text(By.name("password"), arg2);
 	    UIDriver.click(By.xpath("//button[@type='submit']"));
+	   // UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@Then("^I should see the continue shopping button$")
@@ -106,6 +121,7 @@ public class BasicStepdefs {
 	public void i_continue_shopping() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   UIDriver.click(By.linkText("Continue Shopping"));
+	   //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
 	}
 
 	@Then("^I should be able to view list of items$")
@@ -141,6 +157,9 @@ public class BasicStepdefs {
 	    // Write code here that turns the phrase above into concrete actions
 	    UIDriver.driver.navigate().to("http://localhost:9002/login");
 	    UIDriver.driver.manage().window().maximize();
+	    //UIDriver.mystep.write("hello");
+	    //UIDriver.mystep.embed(UIDriver.captureScreenshot(), "image/png");
+	    
 	}
 
 	
