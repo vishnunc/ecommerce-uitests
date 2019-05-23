@@ -1,2 +1,2 @@
 language: java
-script: ./gradle cucumber
+script: gradlew cucumber -Pfeatures=src/test/resources/gradle/cucumber/smoke report --continue
